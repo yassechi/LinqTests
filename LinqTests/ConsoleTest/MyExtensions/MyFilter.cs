@@ -8,12 +8,20 @@ using SeedData;
 
 namespace ConsoleTest.MyExtensions
 {
-    public class MyFilter
+    public static class MyFilter
     {
-        public static IEnumerable<Customer> getAhmedCustomer()
+        public static List<Customer> getByName(this List<Customer> list, string name)
         {
-            var customers = GetData.GetCustomers().Where(c => c.name.Contains("ahmed"));
-            return customers;
+            foreach (var item in list)
+            {
+                if (item.name.Contains(name.ToLower()))
+                {
+                    Console.WriteLine(item.name);
+                }
+            }
+            return (GetData.GetCustomers().Where(c => c.name.Contains(name.ToLower()))).ToList();
         }
+
+
     }
 }

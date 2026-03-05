@@ -1,8 +1,6 @@
 ﻿
 using ConsoleTest.MyExtensions;
+using SeedData;
 
-foreach (var item in MyFilter.getAhmedCustomer())
-{
-    Console.WriteLine(item.name);
-}
-
+// Use Extensions
+GetData.GetCustomers().getByName("Ahmed");
