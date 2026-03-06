@@ -3,6 +3,7 @@ using SeedData.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -40,6 +41,16 @@ namespace ConsoleTest.MyExtensions
             }
             return result;
         } 
+
+        public static List<T> dislay<T>(this List<T> list)
+        {
+            foreach (var item in list)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+            return list;
+        }
 
 
     }

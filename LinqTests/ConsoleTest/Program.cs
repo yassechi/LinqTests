@@ -48,21 +48,42 @@ using SeedData.Models;
 //    Console.WriteLine(item.name + ' ' + item.age + ' ' + item.isActive);
 //}
 
-var listInf30 = GetData.GetCustomers().GetCustomers( c => c.age < 30);
+//var listInf30 = GetData.GetCustomers().GetCustomers( c => c.age < 30);
 
-foreach (var item in listInf30)
-{
-    Console.WriteLine(item.name + ' ' + item.age + ' ' + item.isActive);
-}
-Console.WriteLine("---------------------------------------------------------------");
+//foreach (var item in listInf30)
+//{
+//    Console.WriteLine(item.name + ' ' + item.age + ' ' + item.isActive);
+//}
+//Console.WriteLine("---------------------------------------------------------------");
 
-var listInf30_2 = GetData.GetCustomers().Where(c => c.age < 30 );
+//var listInf30_2 = GetData.GetCustomers().Where(c => c.age < 30 );
 
-foreach (var item in listInf30_2)
-{
-    Console.WriteLine(item.name + ' ' + item.age + ' ' + item.isActive);
-}
+//foreach (var item in listInf30_2)
+//{
+//    Console.WriteLine(item.name + ' ' + item.age + ' ' + item.isActive);
+//}
 
+
+List<int> myList = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+myList.dislay();
+
+List<string> names = new List<string> { "yass", "max", "noe", "ali" };
+names.dislay();
+
+var sup5 =  myList.Where(n => n > 5);
+sup5.ToList().dislay();
+
+var result = from l in myList
+             where l < 5
+             select l;
+
+result.ToList().dislay();
+
+
+
+
+
+Console.ReadLine();
 
 
 
